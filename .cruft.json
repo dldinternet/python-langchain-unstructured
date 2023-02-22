@@ -1,7 +1,7 @@
 {
   "template": "git@github.com:SandsB2B/cookiecutter-project-docs.git",
-  "commit": "13cd3aca7b8ea2b40bf8387e420e8ab53e610a05",
-  "checkout": "v0.4.26",
+  "commit": "d427a9a4434990c89fb53d6baf135d014ec22171",
+  "checkout": "v0.4.27",
   "context": {
     "cookiecutter": {
       "full_name": "Christo De Lange",
