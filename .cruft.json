@@ -1,7 +1,7 @@
 {
   "template": "git@github.com:SandsB2B/cookiecutter-project-docs.git",
-  "commit": "d964f39bfce2c62dcc2b6417d8e30d08bed0cc5d",
-  "checkout": "v0.4.29",
+  "commit": "d4a7b712ded4d1fa77a2eb6ca8165b5968a7921b",
+  "checkout": "v0.4.30",
   "context": {
     "cookiecutter": {
       "full_name": "Christo De Lange",
@@ -19,7 +19,7 @@
       "python_version_min": "3.8.16",
       "python_major_minor_min": "3.8",
       "python_major_minor_max": "3.11",
-      "cruft_skip": ".bumpversion.cfg,CODEOWNERS,docs/TODO.md,README.md,.python-version",
+      "cruft_skip": ".bumpversion.cfg,CODEOWNERS,docs/TODO.md,README.md,.python-version,poetry.toml",
       "src_path_prefix": "src/",
       "site_name": "Python Unstructured",
       "site_description": "A wrapper project for installing Unstructured for Langchain projects.",
@@ -48,7 +48,10 @@
         "detectron2": "{ git = \"https://github.com/facebookresearch/detectron2.git\", branch = \"main\" }",
         "opencv-python": "==4.6.0.66",
         "unstructured": "{ version = \">=0.4.11,<0.5.0\", extras = [\"local-inference\"] }",
-        "layoutparser": "{ version = \">0\", extras = [\"local-inference\"] }"
+        "python-magic": ">0",
+        "python-magic-bin": ">0",
+        "pytesseract": ">0",
+        "layoutparser": "{ version = \">0\", extras = [\"layoutmodels\",\"tesseract\"] }"
       },
       "poetry_dev_dependencies": {},
       "poetry_packages": {},

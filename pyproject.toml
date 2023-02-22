@@ -50,8 +50,12 @@ torch = ">=1.13.1,<1.14.0"
 torchvision = ">=0.14.1,<1.0.0"
 torchaudio = ">=0.13.1,<1.0.0"
 detectron2 = { git = "https://github.com/facebookresearch/detectron2.git", branch = "main" }
-unstructured = { version = ">=0.4.11,<0.5.0", extras = ["local-inference"] }
 opencv-python = "==4.6.0.66"
+unstructured = { version = ">=0.4.11,<0.5.0", extras = ["local-inference"] }
+python-magic = ">0"
+python-magic-bin = ">0"
+pytesseract = ">0"
+layoutparser = { version = ">0", extras = ["layoutmodels","tesseract"] }
 
 [tool.poetry.group.dev.dependencies]
 pip = "~23.0.0"
@@ -89,7 +93,7 @@ gitlint = { version = "~0.18.0" }
 prompt-toolkit = "<3.0.37"
 commitizen = { version = "~2.42.0" }
 #gitown = { version = "~0.2.3" }
-#gitown = { git = "https://github.com/christokur/gitown.git", tag = "v0.2.5" }
+gitown = { git = "https://github.com/christokur/gitown.git", tag = "v0.2.5" }
 poetry-plugin-bump2version = { version = "~0.9.0" }
 # cruft = "~2.12.0"
 cruft = { git = "https://github.com/christokur/cruft.git", branch = "master" }
@@ -178,7 +182,7 @@ pros = { shell = "prospector --profile prospector.yaml", help = "Prospector" }
 b2v = { cmd = "bump2version patch --new-version '${version}' --allow-dirty --commit", args = [{ name = "version", positional = true, multiple = false }], help = "Prospector" }
 gcl = { shell = "cz changelog --incremental || { echo 'With incremental changelog we are ok when there is nothing new to add ...'; true; }", help = "Git Changelog" }
 gl = { shell = "gitlint", help = "Gitlint last commit" }
-gitown = { shell = "gitown --ownership_threshold=10 --codeowners_filename=CODEOWNERS CODEOWNERS", help = "Githib CODEOWNERS" }
+gitown = { shell = "gitown --ownership_threshold=1 --codeowners_filename=CODEOWNERS CODEOWNERS", help = "Githib CODEOWNERS" }
 format = { shell = "black --check --diff ." }
 add = { shell = "git add -A" }
 ibtl = { sequence = ["isort", "black", "tests", "lint"] }
@@ -300,4 +304,4 @@ accent = "yellow"
 toggle = { icon = "material/lightbulb-outline", name = "Switch to dark mode" }
 
 [tool.cruft]
-skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",".python-version",]
+skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",".python-version","poetry.toml",]

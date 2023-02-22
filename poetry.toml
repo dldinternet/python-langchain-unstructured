@@ -1,5 +1,5 @@
 [virtualenvs]
 create = false
 
-[installer]
+#[installer]
 #no-binary = [":all:"]
