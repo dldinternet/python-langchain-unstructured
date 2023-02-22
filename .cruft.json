@@ -1,7 +1,7 @@
 {
   "template": "git@github.com:SandsB2B/cookiecutter-project-docs.git",
-  "commit": "b518daa89855e903727bfc2c1facbdf1b20cef1f",
-  "checkout": "v0.4.15",
+  "commit": "79d0187a651e939b617149f5f6b07bebd803ab82",
+  "checkout": "v0.4.24",
   "context": {
     "cookiecutter": {
       "full_name": "Christo De Lange",
@@ -22,7 +22,7 @@
       "cruft_skip": ".bumpversion.cfg,CODEOWNERS,docs/TODO.md,README.md",
       "src_path_prefix": "src/",
       "site_name": "Python Unstructured",
-      "site_description": "{{description}}",
+      "site_description": "A wrapper project for installing Unstructured for Langchain projects.",
       "site_url": "",
       "theme_light_primary": "teal",
       "theme_light_accent": "brown",
@@ -37,8 +37,9 @@
       "poetry_keywords": "gitops,devops",
       "poetry_include": "*.cfg;*.json;*.yaml",
       "poetry_url_documentation": "",
+      "portray_pdocs_modules": "",
       "poetry_dependencies": {
-        "packaging": ">=21.3",
+        "packaging": ">=21.3"
       },
       "poetry_dev_dependencies": {},
       "poetry_packages": {},
