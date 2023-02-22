@@ -6,7 +6,7 @@ requires = [
 
 [tool.poetry]
 name = "python-langchain-unstructured"
-version = "0.1.0"
+version = "0.1.1"
 description = "A wrapper project for installing Unstructured for Langchain projects."
 authors = ["Christo De Lange <christo.delange@sands.com>"]
 readme = "README.md"
@@ -220,7 +220,7 @@ interpreter = "bash"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.1.0"
+version = "0.1.1"
 version_files = [
     ".bumpversion.cfg",
     "VERSION",
