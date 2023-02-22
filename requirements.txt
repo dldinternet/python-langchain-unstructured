@@ -1,0 +1,3 @@
+--index-url https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple
+
+packaging==23.0 ; python_full_version >= "3.8.16" and python_full_version < "3.11.0"

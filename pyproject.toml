@@ -42,7 +42,7 @@ secondary = false
 default = true
 
 [tool.poetry.dependencies]
-python = ">=3.10.9,<3.11.0"
+python = ">=3.8.16,<3.11.0"
 packaging = ">=21.3"
 
 [tool.poetry.group.dev.dependencies]
@@ -64,7 +64,7 @@ pytest-doctestplus = "~0.12.1"
 
 [tool.poetry.group.local-dev]
 optional = true
-
+ 
 [tool.poetry.group.local-dev.dependencies]
 # https://githubplus.com/PyCQA/prospector/issues/539 1.7.7 with pylint>=2.15.7
 # We can either pin pylint or hope a newer prospector fixes the problem.
@@ -76,14 +76,15 @@ black = { version = "~22.10.0" }
 isort = { version = "~5.11.5" }
 pre-commit = { version = "~2.21.0" }
 pyproject-fmt = { version = "~0.3.5" }
-gitlint = { version = "^0.18.0" }
+gitlint = { version = "~0.18.0" }
+# [2023-02-22 Christo] 3.0.37 has not propagated ...
+prompt-toolkit = "<3.0.37"
+commitizen = { version = "~2.42.0" }
 #gitown = { version = "~0.2.3" }
 #gitown = { git = "https://github.com/christokur/gitown.git", tag = "v0.2.5" }
 poetry-plugin-bump2version = { version = "~0.9.0" }
 # cruft = "~2.12.0"
 cruft = { git = "https://github.com/christokur/cruft.git", branch = "master" }
-prompt-toolkit = "<3.0.37"
-commitizen = "~2.42.0"
 
 [tool.poetry.group.docs]
 optional = true
@@ -148,8 +149,8 @@ fail_under = 25
 
 [tool.coverage.paths]
 source = [
-    "src/langchain-unstructured",
-    "**/site-packages/langchain-unstructured",
+    "src/langchain_unstructured",
+    "**/site-packages/langchain_unstructured",
 ]
 
 [tool.poe.env]
@@ -174,7 +175,8 @@ format = { shell = "black --check --diff ." }
 add = { shell = "git add -A" }
 ibtl = { sequence = ["isort", "black", "tests", "lint"] }
 doctests = { shell = "poetry run pytest --doctest-modules --verbose src/", help = "doctest's" }
-prepare = { sequence = ["locks", "exports", "formats", "tests", "gcl", "gitown", "docs-make", "add", "hooks"], help = "Do things to prepare for release" }
+deps = { shell = "poetry install --with local-dev,test,docs", help = "Install project dependencies" }
+prepare = { sequence = ["locks", "deps", "exports", "formats", "tests", "gcl", "gitown", "docs-make", "add", "hooks"], help = "Do things to prepare for release" }
 docs-make = { shell = "make docs || true" }
 docs-build = { shell = "rm -fr site || true; PYTHONPATH=src/ poetry run portray as_html" }
 docs-serve = { shell = "rm -fr site || true; PYTHONPATH=src/ poetry run portray in_browser --reload" }
@@ -243,7 +245,7 @@ style = [
 [tool.portray]
 docs_dir = "docs"
 output_dir = "site"
-modules = ["langchain-unstructured"]
+modules = ["langchain_unstructured"]
 port = 8000
 append_directory_to_python_path = true
 include_reference_documentation = true
@@ -290,4 +292,4 @@ accent = "yellow"
 toggle = { icon = "material/lightbulb-outline", name = "Switch to dark mode" }
 
 [tool.cruft]
-skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",".python-version"]
+skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",".python-version",]

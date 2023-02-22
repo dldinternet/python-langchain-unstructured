@@ -1,7 +1,7 @@
 {
   "template": "git@github.com:SandsB2B/cookiecutter-project-docs.git",
-  "commit": "d427a9a4434990c89fb53d6baf135d014ec22171",
-  "checkout": "v0.4.27",
+  "commit": "11506a27c4cda3c89c30fbbb47b9d29b597825b5",
+  "checkout": "v0.4.29",
   "context": {
     "cookiecutter": {
       "full_name": "Christo De Lange",
@@ -13,13 +13,13 @@
       "poetry_source_name": "codeartifact",
       "poetry_source_url": "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple/",
       "testpaths": "tests",
-      "package_name": "langchain-unstructured",
+      "package_name": "langchain_unstructured",
       "aws_region_tools": "us-east-2",
       "aws_account_tools": "433714148419",
-      "python_version_min": "3.10.9",
+      "python_version_min": "3.8.16",
       "python_major_minor_min": "3.8",
       "python_major_minor_max": "3.11",
-      "cruft_skip": ".bumpversion.cfg,CODEOWNERS,docs/TODO.md,README.md",
+      "cruft_skip": ".bumpversion.cfg,CODEOWNERS,docs/TODO.md,README.md,.python-version",
       "src_path_prefix": "src/",
       "site_name": "Python Unstructured",
       "site_description": "A wrapper project for installing Unstructured for Langchain projects.",
