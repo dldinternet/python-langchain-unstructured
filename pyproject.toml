@@ -6,7 +6,7 @@ requires = [
 
 [tool.poetry]
 name = "python-langchain-unstructured"
-version = "0.7.1"
+version = "0.1.0"
 description = "A wrapper project for installing Unstructured for Langchain projects."
 authors = ["Christo De Lange <christo.delange@sands.com>"]
 readme = "README.md"
@@ -77,12 +77,13 @@ isort = { version = "~5.11.5" }
 pre-commit = { version = "~2.21.0" }
 pyproject-fmt = { version = "~0.3.5" }
 gitlint = { version = "^0.18.0" }
-commitizen = { version = "^2.38.0" }
 #gitown = { version = "~0.2.3" }
 #gitown = { git = "https://github.com/christokur/gitown.git", tag = "v0.2.5" }
 poetry-plugin-bump2version = { version = "~0.9.0" }
 # cruft = "~2.12.0"
 cruft = { git = "https://github.com/christokur/cruft.git", branch = "master" }
+prompt-toolkit = "<3.0.37"
+commitizen = "~2.42.0"
 
 [tool.poetry.group.docs]
 optional = true
@@ -147,8 +148,8 @@ fail_under = 25
 
 [tool.coverage.paths]
 source = [
-    "src/unstructured",
-    "**/site-packages/unstructured",
+    "src/langchain-unstructured",
+    "**/site-packages/langchain-unstructured",
 ]
 
 [tool.poe.env]
@@ -219,7 +220,7 @@ interpreter = "bash"
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.7.1"
+version = "0.1.0"
 version_files = [
     ".bumpversion.cfg",
     "VERSION",
@@ -242,7 +243,7 @@ style = [
 [tool.portray]
 docs_dir = "docs"
 output_dir = "site"
-modules = ["unstructured"]
+modules = ["langchain-unstructured"]
 port = 8000
 append_directory_to_python_path = true
 include_reference_documentation = true
@@ -289,4 +290,4 @@ accent = "yellow"
 toggle = { icon = "material/lightbulb-outline", name = "Switch to dark mode" }
 
 [tool.cruft]
-skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",]
+skip= [".bumpversion.cfg","CODEOWNERS","docs/TODO.md","README.md",".python-version"]

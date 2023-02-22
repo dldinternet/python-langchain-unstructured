@@ -1,0 +1,21 @@
+{
+  "HostedZoneId": "Z0827901K2W3PZV3XWL1",
+  "ChangeBatch": {
+    "Comment": "cookiecutter-project-docs.docs.infra-area2.com",
+    "Changes": [
+      {
+        "Action": "CREATE",
+        "ResourceRecordSet": {
+          "Name": "cookiecutter-project-docs.docs.infra-area2.com",
+          "Type": "CNAME",
+          "TTL": 60,
+          "ResourceRecords": [
+            {
+              "Value": "sandsb2b.github.io"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
