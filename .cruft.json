@@ -9,7 +9,7 @@
       "github_username": "christokur",
       "project_name": "python-langchain-unstructured",
       "description": "A wrapper project for installing Unstructured for Langchain projects.",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "poetry_source_name": "codeartifact",
       "poetry_source_url": "https://artifacts-433714148419.d.codeartifact.us-east-2.amazonaws.com/pypi/pypi/simple/",
       "testpaths": "tests",
