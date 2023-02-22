@@ -43,7 +43,15 @@ default = true
 
 [tool.poetry.dependencies]
 python = ">=3.8.16,<3.11.0"
-packaging = ">=21.3"
+langchain = ">=0.0.92,<0.1.0"
+openai = ">=0.26.5,<1.0.0"
+cython = ">=0.29.33,<1.0.0"
+torch = ">=1.13.1,<1.14.0"
+torchvision = ">=0.14.1,<1.0.0"
+torchaudio = ">=0.13.1,<1.0.0"
+detectron2 = { git = "https://github.com/facebookresearch/detectron2.git", branch = "main" }
+unstructured = { version = ">=0.4.11,<0.5.0", extras = ["local-inference"] }
+opencv-python = "==4.6.0.66"
 
 [tool.poetry.group.dev.dependencies]
 pip = "~23.0.0"
@@ -64,7 +72,7 @@ pytest-doctestplus = "~0.12.1"
 
 [tool.poetry.group.local-dev]
 optional = true
- 
+
 [tool.poetry.group.local-dev.dependencies]
 # https://githubplus.com/PyCQA/prospector/issues/539 1.7.7 with pylint>=2.15.7
 # We can either pin pylint or hope a newer prospector fixes the problem.

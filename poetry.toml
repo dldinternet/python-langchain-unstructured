@@ -2,4 +2,4 @@
 create = false
 
 [installer]
-no-binary = [":all:"]
+#no-binary = [":all:"]

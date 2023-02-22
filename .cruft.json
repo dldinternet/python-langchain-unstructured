@@ -1,6 +1,6 @@
 {
   "template": "git@github.com:SandsB2B/cookiecutter-project-docs.git",
-  "commit": "11506a27c4cda3c89c30fbbb47b9d29b597825b5",
+  "commit": "d964f39bfce2c62dcc2b6417d8e30d08bed0cc5d",
   "checkout": "v0.4.29",
   "context": {
     "cookiecutter": {
@@ -39,7 +39,16 @@
       "poetry_url_documentation": "",
       "portray_pdocs_modules": "",
       "poetry_dependencies": {
-        "packaging": ">=21.3"
+        "langchain": ">=0.0.92,<0.1.0",
+        "openai": ">=0.26.5,<1.0.0",
+        "cython": ">=0.29.33,<1.0.0",
+        "torch": ">=1.13.1,<1.14.0",
+        "torchvision": ">=0.14.1,<1.0.0",
+        "torchaudio": ">=0.13.1,<1.0.0",
+        "detectron2": "{ git = \"https://github.com/facebookresearch/detectron2.git\", branch = \"main\" }",
+        "opencv-python": "==4.6.0.66",
+        "unstructured": "{ version = \">=0.4.11,<0.5.0\", extras = [\"local-inference\"] }",
+        "layoutparser": "{ version = \">0\", extras = [\"local-inference\"] }"
       },
       "poetry_dev_dependencies": {},
       "poetry_packages": {},
