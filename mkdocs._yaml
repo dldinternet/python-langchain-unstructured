@@ -1,0 +1,44 @@
+---
+site_name: "python-langchain-unstructured"
+site_description: "A wrapper project for installing Unstructured for Langchain projects."
+site_url: "https://python-langchain-unstructured.docs.dldinternet.com/"
+repo_url: "https://github.com/dldinternet/python-langchain-unstructured"
+edit_uri: "edit/master"
+copyright: "(c) 2022 Las Vegas Sands"
+extra:
+  generator: false
+extra_css:
+  - "/docs/css/termynal.css"
+  - "/docs/css/custom.css"
+extra_javascript:
+  - "/docs/js/termynal.js"
+  - "/docs/js/custom.js"
+strict: true
+nav:
+  - Home: "README.md"
+  - Clusters: "/clusters"
+
+theme:
+  name: "material"
+  features:
+  - "search.suggest"
+  - "search.highlight"
+  - "content.tabs.link"
+  icon:
+    repo: "fontawesome/brands/github-alt"
+  custom_dir: "docs/overrides"
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: "default"
+      primary: "lime"
+      accent: "brown"
+      toggle:
+        icon: "material/lightbulb"
+        name: "Switch to light mode"
+    - media: "(prefers-color-scheme: dark)"
+      scheme: "slate"
+      primary: "lime"
+      accent: "yellow"
+      toggle:
+        icon: "material/lightbulb-outline"
+        name: "Switch to dark mode"

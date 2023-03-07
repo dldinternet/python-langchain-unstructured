@@ -1,0 +1,21 @@
+{
+  "HostedZoneId": "Z....",
+  "ChangeBatch": {
+    "Comment": "REPO_NAME.docs.dldinternet.com",
+    "Changes": [
+      {
+        "Action": "CREATE",
+        "ResourceRecordSet": {
+          "Name": "REPO_NAME.docs.dldinternet.com",
+          "Type": "CNAME",
+          "TTL": 60,
+          "ResourceRecords": [
+            {
+              "Value": "dldinternet.github.io"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

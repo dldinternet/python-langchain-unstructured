@@ -1,0 +1,29 @@
+output-format: pylint
+autodetect: false
+strictness: veryhigh
+test-warnings: true
+doc-warnings: false
+max-line-length: 120
+
+#inherits:
+#  - my/other/profile.yml
+
+ignore-paths:
+  - "debug"
+  - docs/
+
+#ignore-patterns:
+#  - (^|/)skip(this)?(/|$)
+
+pycodestyle:
+  disable:
+    - E203
+  options:
+    max-line-length: 120
+
+#mccabe:
+#  run: false
+
+#pyflakes:
+#  disable:
+#    - F841

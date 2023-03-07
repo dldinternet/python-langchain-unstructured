@@ -1,0 +1,16 @@
+from langchain.document_loaders import UnstructuredFileLoader
+from langchain.document_loaders import UnstructuredURLLoader
+
+loader = UnstructuredFileLoader("5 Steps_to_Create_an_Infographic_Blog Post.jpg")
+
+# urls = [
+
+# “https://Langchain. readthedocs. io/en/Latest/modules/document_lLoaders/exampLes/url.html",
+# “https: //Langchain. readthedocs.io/en/Latest/modules/document_Loaders/how_to_guides.html”
+#]
+
+# Loader = UnstructuredURLLoader(urls=urls)
+
+docs = loader. load()
+
+print (docs[®@].page_content[ :100])
